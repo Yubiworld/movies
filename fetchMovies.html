@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html data-brackets-id='178' lang="en">
+
+<head data-brackets-id='179'>
+    <meta data-brackets-id='180' charset="utf-8">
+    <meta data-brackets-id='181' name="viewport" content="width=device-width, initial-scale=1.0">
+    <title data-brackets-id='182'>Movies</title>
+</head>
+    <style data-brackets-id='183'>
+        article{
+            border: 2px solid;
+
+        }
+
+        section{
+            display:grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 10px;
+        }
+    </style>
+
+<body data-brackets-id='184'>
+
+    <h1 data-brackets-id='185'>Let me fetch for you</h1>
+
+    <section data-brackets-id='186'></section>
+
+    <template data-brackets-id='187'>
+        <article data-brackets-id='188'>
+        <h1 data-brackets-id='189'>Title</h1>
+        <p data-brackets-id='190' class = "genre">Genre</p>
+        <p data-brackets-id='191' class = "runningTime">Running Time</p>
+        <p data-brackets-id='192' class = "director">Director</p>
+        <p data-brackets-id='193' class = "stars">Stars</p>
+        </article>
+    </template>
+
+    <script data-brackets-id='194'>
+
+        fetch("fetchMovies.json").then(function(response) {
+                 return response.json();
+            }).then(function(json) {
+                return show(json);
+            })
+
+
+        function show(json) {
+            json.forEach(function(product) {
+
+                let template = document.querySelector('template').content;
+                let clone = template.cloneNode(true);
+                let section = document.querySelector('section');
+
+                clone.querySelector('h1').textContent = product.title;
+                clone.querySelector('.genre').textContent = product.genre;
+
+                clone.querySelector('.runningTime').textContent = product.runningTime;
+                clone.querySelector('.director').textContent = product.director;
+                clone.querySelector('.stars').textContent = product.stars;
+
+                section.appendChild(clone);
+
+            });
+
+        }
+
+    </script>
+</body>
+
+</html>

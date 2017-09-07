@@ -1,0 +1,31 @@
+[{
+    "title": "It",
+    "genre": "Drama/Horror",
+    "runningTime": "135m",
+    "director": "Andy Muschietti",
+    "stars": "Bill Skarsgård, Jaeden Lieberher, Finn Wolfhard, Sophia Lillis"
+
+},
+{
+    "title": "Home Again",
+    "genre": "Comedy/Drama/Romance",
+    "runningTime": "97m",
+    "director": "Hallie Meyers-Shyer",
+    "stars": "Nat Wolff, Reese Witherspoon, Lake Bell, Michael Sheen"
+},
+{
+    "title": "Rememory",
+    "genre": "Drama/Mystery/Sci-Fi",
+    "runningTime": "111m",
+    "director": "Mark Palansky",
+    "stars": "Peter Dinklage, Matt Ellis, Jordana Largy, Martin Donovan"
+
+},
+ {
+    "title": "The Good Catholic",
+    "genre": "Comedy/Drama",
+    "runningTime": "96m",
+    "director": "Paul Shoulberg",
+    "stars": "Zachary Spicer, Wrenn Schmidt, Danny Glover, John C. McGinley"
+ }
+]
